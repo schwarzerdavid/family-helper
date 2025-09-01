@@ -1,0 +1,54 @@
+# Ignore everything by default
+*
+
+# Allow specific file types
+!*.md
+!*.json
+!*.yaml
+!*.yml
+!*.tf
+!*.hcl
+!*.js
+!*.ts
+!*.py
+!*.go
+!*.kt
+!*.sh
+!*.sql
+!*.dockerfile
+!Dockerfile*
+!*.gitignore
+!*.gitattributes
+
+# Allow specific directories and their contents
+!platform/
+!platform/**
+!services/
+!services/**
+!deploy/
+!deploy/**
+!docs/
+!docs/**
+!.github/
+!.github/**
+
+# Still ignore these even if they match above patterns
+**/.env
+**/.env.*
+**/node_modules/
+**/__pycache__/
+**/*.pyc
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+**/*.tfvars
+**/dist/
+**/build/
+**/coverage/
+**/.DS_Store
+**/secrets.yaml
+**/.secrets/
+**/*.log
+**/*.pem
+**/*.p12
+**/*.jks
