@@ -1,0 +1,30 @@
+{
+  "name": "@family-helper/platform-ts",
+  "version": "1.0.0",
+  "description": "Platform abstraction layer for Family Helper services",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "family-helper",
+    "platform",
+    "wrapper"
+  ],
+  "author": "Family Helper Team",
+  "license": "MIT",
+  "dependencies": {
+    "@opentelemetry/api": "^1.7.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.8.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.2.0"
+  }
+}
