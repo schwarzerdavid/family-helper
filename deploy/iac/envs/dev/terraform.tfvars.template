@@ -1,0 +1,17 @@
+# Development Environment Configuration Template
+# Copy this file to terraform.tfvars and customize as needed
+
+aws_region = "us-east-1"
+vpc_cidr   = "10.0.0.0/16"
+
+availability_zones = [
+  "us-east-1a",
+  "us-east-1b"
+]
+
+# Cost optimization for development
+enable_nat_gateway = true
+single_nat_gateway = true
+
+# Log retention for development (shorter retention for cost)
+log_retention_days = 7
