@@ -40,7 +40,7 @@ What other options were evaluated and why were they not chosen?
 
 ## Current ADRs
 
-Based on the main architecture document, key decisions include:
+Based on the main architecture document and Phase 0 implementation, key decisions include:
 
 ### ADR-001: Event Bus Technology Selection
 - **Decision**: Use AWS SNS+SQS FIFO over Apache Kafka
@@ -56,6 +56,26 @@ Based on the main architecture document, key decisions include:
 - **Decision**: ECS with Fargate over EKS
 - **Rationale**: Simpler operations, pay-per-use pricing, faster development velocity
 - **Trade-off**: Less Kubernetes ecosystem benefits, potential future migration needs
+
+### ADR-004: Platform Wrapper Interface Enhancement
+- **Decision**: Enhanced platform interfaces beyond minimum requirements
+- **Rationale**: Future-proofing, developer experience, comprehensive platform service coverage
+- **Trade-off**: Increased complexity, more interfaces to maintain
+
+### ADR-005: Dependency Injection Pattern for Platform Services
+- **Decision**: Constructor injection with fallback logger pattern for stub services
+- **Rationale**: Clean architecture, consistent logging, testability, no circular dependencies
+- **Trade-off**: Slight complexity increase, interface coupling
+
+### ADR-006: Factory Pattern for Service Container Creation
+- **Decision**: Factory function alongside direct exports for service container management
+- **Rationale**: Dependency wiring, configurability, testability, backward compatibility
+- **Trade-off**: More complex API surface, two patterns to maintain
+
+### ADR-007: Comprehensive Testing Strategy for Platform Wrapper
+- **Decision**: Extensive test coverage (82 tests, 88%+ coverage) with documentation-focused approach
+- **Rationale**: Quality assurance, living documentation, CI/CD integration, regression prevention
+- **Trade-off**: Higher development time investment, test maintenance overhead
 
 ## Creating New ADRs
 
